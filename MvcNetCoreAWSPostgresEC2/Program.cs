@@ -7,7 +7,7 @@ string connectionString = builder.Configuration.GetConnectionString("Postgres");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<HospitalContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<HospitalContext>(options => options.UseMySQL(connectionString));
 builder.Services.AddTransient<RepositoryHospitales>();
 
 var app = builder.Build();
